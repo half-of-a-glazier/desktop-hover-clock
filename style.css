@@ -1,0 +1,8 @@
+#clock {
+	font-size: 100px;
+	font-family: "Segoe UI Emoji";
+}
+
+::-webkit-scrollbar {
+	display: none;
+}

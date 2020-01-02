@@ -1,3 +1,10 @@
+const { remote } = require('electron');
+const mainWin = remote.getCurrentWindow();
+let display;
+
+// mainWin.blur();
+// mainWin.focus();
+
 window.addEventListener('DOMContentLoaded', updateClock, false);
 	function updateClock() {
 		let now = new Date();
@@ -11,8 +18,22 @@ window.addEventListener('DOMContentLoaded', updateClock, false);
 		//seconds = (seconds < 10 ? '0' : '') + seconds;
 
 		let timeString = hours + ':' + minutes;// + ':' + seconds;
-		document.getElementById('clock').innerHTML = timeString;
-		document.getElementById('clock').textContent = timeString;
+		//document.getElementById('clock').innerHTML = timeString;
+		display = document.getElementById('clock');
+		display.textContent = timeString;
 
 		setTimeout(updateClock, 1000);
+	}
+
+	window.addEventListener('mouseover', showClock);
+	window.addEventListener('mouseout', hideClock);
+
+	function showClock() {
+		mainWin.setBackgroundColor('#618f83');
+		display.fontColor('#618f83');
+	}
+
+	function hideClock() {
+		display.textContent.fontColor('#00FFFFFF');
+		
 	}

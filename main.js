@@ -17,8 +17,10 @@ ipc.on('invokeAction', function(event, data) {
 
 function createWindow() {
 	let win = new BrowserWindow({
-		width: 800,
-		height: 600,
+		width: 260,
+		height: 120,
+		transparent: true,
+		frame: false,
 		webPreferences: {
 			nodeIntegration: true
 		}
