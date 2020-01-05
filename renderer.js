@@ -25,8 +25,8 @@ window.addEventListener('DOMContentLoaded', updateClock, false);
 		setTimeout(updateClock, 1000);
 	}
 
-	window.addEventListener('mouseover', showClock);
-	window.addEventListener('mouseout', hideClock);
+	//window.addEventListener('mouseover', showClock);
+	//window.addEventListener('mouseout', hideClock);
 
 	function showClock() {
 		mainWin.setBackgroundColor('#618f83');
@@ -34,6 +34,7 @@ window.addEventListener('DOMContentLoaded', updateClock, false);
 	}
 
 	function hideClock() {
+		mainWin.setBackgroundColor('#00FFFFFF');
 		display.textContent.fontColor('#00FFFFFF');
 		
 	}

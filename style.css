@@ -1,7 +1,49 @@
 #clock {
 	font-size: 100px;
 	font-family: "Segoe UI Emoji";
+	font-weight: bolder;
+	color: rgba(255, 255, 255, 0);
+	-webkit-app-region: no-drag;
+	vertical-align: middle;
 }
+
+#container {
+	width: 290;
+	height: 10;
+	background: none;
+	position: relative;
+	-webkit-app-region: no-drag;
+	vertical-align: middle;
+}
+
+#border {
+	background: rgba(179, 179, 179, 50);
+	border-radius: 30px;
+	width: 10px;
+	position: absolute;
+	vertical-align: middle;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	-webkit-app-region: drag;
+}
+
+#container:hover > #clock {
+	color: #2e2e2e;
+	-webkit-transition:color .5s ease-in;
+	-webkit-app-region: no-drag;
+}
+/*
+#container:hover > #border {
+	cursor: move;
+}
+- almost-transparent text
+- dark mode / light mode
+- colour option
+- change font
+- disable resizing
+- transparent move-bar
+*/
 
 ::-webkit-scrollbar {
 	display: none;
