@@ -1,7 +1,8 @@
 {
   "name": "desktop-clock",
+"productName": "Discreet Desktop Clock",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sleek, discreet desktop clock that fades into view on mouse hover",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
