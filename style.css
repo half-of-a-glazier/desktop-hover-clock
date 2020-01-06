@@ -1,3 +1,7 @@
+body {
+	user-select: none;
+}
+
 #clock {
 	font-size: 100px;
 	font-family: "Segoe UI Emoji";
